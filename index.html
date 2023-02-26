@@ -1,0 +1,92 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNXq_M-_nKNcUwRdOq2awJHbwvge_TsAfYZw&usqp=CAU");
+background-size:cover;
+background-repeat:no-repeat;
+color:white;
+}
+button{
+font color:Black;
+
+}
+body{
+color:red;}
+</style>
+<script>
+function chan(){
+document.getElementById("result").href="file:///G:/website.html";
+}
+function validation(){
+var a=document.myform.pw.value;
+var b=document.myform.rpw.value;
+var c=a.length;
+var d=document.myform.mn.value;
+var n=d.length;
+if(a!=b){
+alert("Enter the same password");
+return false;
+}
+else{
+if(c<6){
+alert("Password should be atleast 6 characters");
+return false;
+}
+}
+if(isNaN(d)){
+alert("Enter only digits");
+return false;
+}
+else{
+return true;
+}
+}
+</script>
+</head>
+<body >
+<center><h1 style="color:green">INTRODUCTION</h1></center>
+<center>
+<h2 >
+THIS WEBSITE SAYS ABOUT CAFE RESTAURANT<br>
+AFTER FILLING THE LOGIN FORM CLICK ON SUBMIT THEN GO TO THE HOME PAGE OF CAFE RESTAURANT<br>
+CLICK ON THE MENU OPTION THEN WE GO TO THE MENU PAGE <br>
+CLICK ON THE CONTACT IT SHOWS THE LOCATION & OPENING HOURS OF CAFE RESTAURANT<br>
+CLICK ON ABOUT IT TELLS ABOUT CAFE RESTAURANT AND IT'S SERVICES 
+</h2>
+</center>
+
+<center><h1 style="color:grey">LOGIN</h1></center><hr>
+<form name="myform" action="file:///G:/website.html" onsubmit="return validation()">
+<center>
+<table>
+<tr>
+<td>User name</td>
+<td><input type="text" name="un" required></td>
+</tr>
+<tr>
+<td>Email Id</td>
+<td><input type="text" name="em" required></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" name="pw" required></td>
+</tr>
+<tr>
+<td>Retype password</td>
+<td><input type="password" name="rpw" ></td>
+</tr>
+<tr>
+<td>Mobile Number</td>
+<td><input type="text" name="mn" ></td>
+</tr>
+<tr>
+<td> </td>
+<td ><input type="submit" id="result" name="button" value="submit" onclick="chan()"></td>
+
+</tr>
+</table>
+</center>
+</form>
+</body>
+</html>
